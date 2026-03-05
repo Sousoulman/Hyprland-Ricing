@@ -1,0 +1,211 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/logo/osu.txt",
+    "color": {
+      "1": "white",
+      "2": "38;2;227;101;158"
+    },
+    "width": 30,
+    "height": 20,
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "right": 4
+    },
+    "printRemaining": true,
+    "recache": false,
+    "position": "left"
+  },
+  "display": {
+    "separator": " -> "
+    },
+    "size": {
+      "maxPrefix": "YB",
+      "binaryPrefix": "jedec",
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "temp": {
+      "unit": "D",
+      "ndigits": 1,
+      "color": {
+        "green": "green",
+        "yellow": "yellow",
+        "red": "red"
+      },
+      "spaceBeforeUnit": "default"
+    },
+    "percent": {
+      "type": [
+        "bar",
+	"bar-monochrome"
+      ],
+      "ndigits": 0,
+      "color": {
+        "green": "green",
+        "yellow": "yellow",
+        "red": "red"
+      },
+      "spaceBeforeUnit": "default",
+      "width": 0
+    },
+    "bar": {
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      },
+      "border": {
+        "left": "[ ",
+        "right": " ]",
+        "leftElapsed": "",
+        "rightElapsed": ""
+      },
+      "color": {
+        "elapsed": "auto",
+        "total": "white",
+        "border": "white"
+      },
+      "width": 10
+    },
+    "fraction": {
+      "ndigits": 2
+    },
+    "noBuffer": false,
+    "key": {
+      "width": 0,
+      "type": "string",
+      "paddingLeft": 0
+    },
+    "freq": {
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+  "constants": [],
+  "general": {
+    "thread": true,
+    "processingTimeout": 5000,
+    "detectVersion": true,
+    "playerName": "Sousoulman",
+    "dsForceDrm": false
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "                  Software",
+      "outputColor": "red"
+    },
+    {
+      "type": "custom",
+      "format": "╭────────────────────────────────────────",
+      "outputColor": "red"
+    },
+    {
+      "type": "os",
+      "key": "│ {icon}",
+      "outputColor": "red",
+      "keyColor": "red"
+    },
+    {
+      "type": "wm",
+      "key": "│ {icon}",
+      "detectPlugin": false,
+      "outputColor": "red",
+      "keyColor": "red"
+    },
+    {
+      "type": "terminal",
+      "key": "│ {icon}",
+      "outputColor": "red",
+      "keyColor": "red"
+    },
+    {
+      "type": "shell",
+      "key": "│ {icon}",
+      "keyColor": "red",
+      "outputColor": "red"
+    },
+    {
+      "type": "custom",
+      "format": "                  Hardware",
+      "outputColor": "blue"
+    },
+    {
+      "type": "custom",
+      "format": "╭────────────────────────────────────────",
+      "outputColor": "blue"
+    },
+    {
+      "type": "display",
+      "key": "│ {icon}",
+      "compactType": "none",
+      "preciseRefreshRate": false,
+      "order": null,
+      "outputColor": "blue",
+      "keyColor": "blue"
+    },
+    {
+      "type": "cpu",
+      "key": "│ {icon}",
+      "temp": false,
+      "showPeCoreCount": false,
+      "outputColor": "blue",
+      "keyColor": "blue"
+    },
+    {
+      "type": "gpu",
+      "key": "│ {icon}",
+      "driverSpecific": false,
+      "detectionMethod": "pci",
+      "temp": false,
+      "hideType": "none",
+      "outputColor": "blue",
+      "keyColor": "blue"
+    },
+    {
+      "type": "memory",
+      "key": "│ {icon}", 
+      "outputColor": "blue",
+      "keyColor": "blue"
+      },
+      {
+      "type": "disk",
+      "key": "│ {icon}",
+      "showRegular": true,
+      "showExternal": true,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "",
+      "hideFolders": "/efi:/boot:/boot/*",
+      "hideFS": "",
+      "useAvailable": false,
+      "outputColor": "blue",
+      "keyColor": "blue"
+      },
+      {
+      "type": "battery",
+      "key": "│ {icon}",
+      "temp": false,
+      "outputColor": "blue",
+      "keyColor": "blue"
+    },
+    "break",
+    {
+      "type": "colors",
+      "key": " ",
+      "keyIcon": "",
+      "symbol": "block",
+      "paddingLeft": 0,
+      "block": {
+        "width": 3,
+        "range": [
+          0,
+          15
+        ]
+      }
+    }
+  ]
+}
