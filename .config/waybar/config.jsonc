@@ -1,0 +1,75 @@
+{
+	"style": "~/.config/waybar/style.css",
+
+
+	"layer": "top",
+	"position": "top",
+	"height": "",
+	"widht": "",
+	"modules-left": [
+		"custom/update",
+		"cpu",
+		"network"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"bluetooth",
+		"clock",
+		"battery"
+	],
+
+	"battery": {
+		"format-charging": "{capacity}% ",
+		"format": "{capacity}% {icon}",
+		"format-icons":  ["", "", "", "", ""] 
+	},
+
+	"clock": {
+		"format": "{:%H:%M}"
+	},
+
+	"bluetooth": {
+		"format": " {status}"
+	},
+
+	"cpu": {
+		"format": " {usage}%",
+		"interval": 1
+	},
+
+	"network": {
+	    "interface": "wlp2s0",
+	    "format": "{ifname}",
+	    "format-wifi": "{essid} ({signalStrength}%) ",
+	    "format-ethernet": "{ipaddr}/{cidr} 󰊗"
+	},
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+		  "1": "○",
+		  "2": "○",
+		  "3": "○",
+		  "4": "○",
+		  "5": "○",
+		  "default": "○",
+		  "active": "◉"
+		},
+		"persistent-workspaces": {
+			"*": 5
+		}
+	},
+
+	"custom/update": {
+		"format": "󰅢 {}",
+		"exec": "checkupdates | wc -l",
+		"interval": 1,
+		"on-click": "kitty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar"
+	},
+
+	"custom/menu": {
+		"format": "◻️"
+	}
+}
