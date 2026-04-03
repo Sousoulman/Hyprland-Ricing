@@ -2,20 +2,14 @@
 DIR=$HOME/.config/hypr/images/wallpapers
 WALLPAPER=$(ls $DIR)
 
-i=0
-while read line 
+NB_WALLPAPER=$(($(echo $WALLPAPER | grep -o ' ' | wc -l)+1))
+
+for i in $(seq 1 $NB_WALLPAPER)
 do 
-	WALLPAPERS[ $i ]="$line"
-	(( i++ ))
-done < <(ls $DIR -ls)
-QUERY=$(awww query)
-CURRENT_WALLPAPER=${QUERY##*/}
-WALLPAPERS=("${WALLPAPERS[@]/$CURRENT_WALLPAPER}")
-WALLPAPERS=("${WALLPAPERS[@]/total 41320}")
-NUM_WALLPAPER=${#WALLPAPERS[*]}
-RANDOM_WALLPAPER=${WALLPAPERS[$RANDOM%$NUM_WALLPAPER]}
-RANDOM_WALLPAPER_CUT=${RANDOM_WALLPAPER##* }
-echo $RANDOM_WALLPAPER_CUT
-echo $RANDOM_WALLPAPER
-echo $NUM_WALLPAPER
-awww img --transition-type random $DIR/$RANDOM_WALLPAPER_CUT
+    WALLPAPERS[ $i ]=$(echo $WALLPAPER | cut -d " " -f $i)
+done
+
+NEW_WALLPAPER=$(printf "%s\n" "${WALLPAPERS[@]}" | rofi -dmenu -p)
+
+hyprctl notify 2 1000 "rgb(008080)" "fontsize:100 Wallpaper switch"
+awww img --transition-type random $DIR/$NEW_WALLPAPER
