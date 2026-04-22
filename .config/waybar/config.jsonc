@@ -15,6 +15,7 @@
 		"hyprland/workspaces"
 	],
 	"modules-right": [
+        "tray",
 		"bluetooth",
 		"clock",
 		"battery"
@@ -71,5 +72,9 @@
 
 	"custom/menu": {
 		"format": "◻️"
-	}
+	},
+
+    "tray": {
+        "icon-size": 15,
+    }
 }
