@@ -9,7 +9,7 @@ browser = "zen-browser"
 menu = "rofi -show drun" 
 textedit = "nvim ~/"
 notes = "obsidian"
-discordLauncher = "vesktop"
+discordLauncher = "discord"
 
 -- define some directories
 scripts = "~/.config/hypr/scripts"

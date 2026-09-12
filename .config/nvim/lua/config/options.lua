@@ -13,10 +13,12 @@ vim.opt.wrap = false
 
 -- transform tab into space
 vim.opt.expandtab = true
--- set the number of space needed to be a tab to 4
-vim.opt.tabstop = 4
+-- set the number of space needed to be a tab to 8
+vim.opt.tabstop = 8
 -- use the tabstop for auto indent 
-vim.opt.shiftwidth = 0
+vim.opt.shiftwidth = 8
+
+vim.opt.softtabstop = 8
 
 -- Synchronise the nvim clipboard and the system clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -35,3 +37,13 @@ vim.opt.ignorecase = true
 
 -- add true color support
 vim.opt.termguicolors = true
+
+-- set the leader key
+vim.g.mapleader = " "
+
+-- set lsp completion option
+vim.opt.completeopt = {'menuone', 'noselect'}
+
+-- set the style of popup window
+vim.o.pumheight = 5
+vim.o.pumborder = 'rounded'

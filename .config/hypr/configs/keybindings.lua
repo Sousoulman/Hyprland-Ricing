@@ -33,8 +33,8 @@ hl.bind(mainMod.."+ L", hl.dsp.focus({direction = "right"}))
 
 -- Bind windows move 
 hl.bind(mainMod.."+ SHIFT + H", hl.dsp.window.move({direction = "left"}))
-hl.bind(mainMod.."+ SHIFT + J", hl.dsp.window.move({direction = "up"}))
-hl.bind(mainMod.."+ SHIFT + K", hl.dsp.window.move({direction = "down"}))
+hl.bind(mainMod.."+ SHIFT + K", hl.dsp.window.move({direction = "up"}))
+hl.bind(mainMod.."+ SHIFT + J", hl.dsp.window.move({direction = "down"}))
 hl.bind(mainMod.."+ SHIFT + L",hl.dsp.window.move({direction = "right"}))
 
 -- Bind workspace switching 
@@ -69,3 +69,5 @@ hl.bind(mainMod.."+ mouse:273", hl.dsp.window.resize())
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
 hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("hyprctl hyprsunset gamma +10"), { repeating = true, locked = true, })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("hyprctl hyprsunset gamma -10"), { repeating = true, locked = true, })

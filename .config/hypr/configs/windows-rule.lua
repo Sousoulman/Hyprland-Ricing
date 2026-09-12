@@ -33,3 +33,10 @@ hl.window_rule({
     },
     workspace = "1 silent"
 })
+
+hl.window_rule({
+    match = {
+        class = "discord"
+    },
+    workspace = "1 silent"
+})
