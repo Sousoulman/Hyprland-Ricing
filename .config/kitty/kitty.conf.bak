@@ -2950,9 +2950,3 @@ bold_italic_font   JetBrainsMono Nerd Font Mono Extra Bold Italic
 #: }}}
 
 #: }}}
-
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-include current-theme.conf
-# END_KITTY_THEME

@@ -22,9 +22,9 @@ hl.window_rule({
 
 hl.window_rule({
     match = {
-        class = "(steam_app)"
+        class = "^steam_app"
     },
-    workspace = "5 silent"
+    workspace = "4"
 })
 
 hl.window_rule({

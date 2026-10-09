@@ -3,11 +3,11 @@ mainMod = "WIN"
 
 -- define the basic app
 terminal = "kitty" 
-fileManager = "dolphin" 
-fileManagert = "kitty -e ranger" 
-browser = "zen-browser" 
+fileManagert = "dolphin" 
+fileManager = "kitty -e yazi" 
+browser = "zen-browser -p 'default'" 
 menu = "rofi -show drun" 
-textedit = "nvim ~/"
+textedit = "kitty -e nvim ~/"
 notes = "obsidian"
 discordLauncher = "discord"
 
