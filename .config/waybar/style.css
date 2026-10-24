@@ -1,0 +1,37 @@
+﻿* {
+	font-family: "Roboto", "Arial";
+	font-size: 20px;
+	color: #000;
+}
+
+window#waybar{
+    all:initial;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.modules-left{
+    border-radius: 6px;
+	padding: 10px;
+	margin: 5px;
+	background: rgba(82, 82, 82, .7);
+}
+
+.modules-center{
+    border-radius: 6px;
+    margin-right: 100px;
+	background: rgba(82, 82, 82, .7);
+}
+
+.modules-right{
+    border-radius: 6px;
+	padding: 10px;
+    margin-left: 100px;
+	margin: 5px;
+	background: rgba(82, 82, 82, .7);
+}
+
+#custom-updates, #cpu, #network, #bluetooth, #clock, #battery, #tray{
+	margin: 4px;
+}
+

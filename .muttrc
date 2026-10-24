@@ -1,0 +1,83 @@
+set from="dulieuluca@gmail.com"
+set use_from=yes
+set envelope_from = yes
+set realname="Luca Dulieu"
+set reverse_name
+set header_cache=/.mutt/cache/headers
+set certificate_file=/.mutt/certificates
+set message_cachedir=/.mutt/cache/bodies
+
+set signature=~/.signature
+
+set folder=~/Mail
+set spoolfile=+linux-kernel
+set tmpdir=/tmp
+
+mailboxes +linux-kernel +linux-newbie
+
+set editor="nvim -c 'set tw=72' -c 'set wrap'"
+
+set imap_check_subscribed
+
+set menu_scroll
+
+set sidebar_visible = yes
+set sidebar_width = 30
+set sidebar_short_path = yes
+
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Co sidebar-open
+
+bind pager \ej next-line
+bind pager \ek previous-line
+bind pager \el next-page
+bind pager \eh previous-page
+
+set sort_aux=reverse-last-date-received
+set sort=threads
+set sort_re
+
+color quoted green default
+color quoted1 blue default
+color quoted2 cyan default
+color quoted3 yellow default
+color quoted4 red default
+color quoted5 brightred default
+color signature brightgreen default
+color bold black default
+color underline black default
+color normal default default
+
+color header brightmagenta default "^(From)"
+color header brightcyan default "^(Subject)"
+color header brightwhite default "^(CC|BCC)"
+
+# Patch syntax highlighting
+#color   normal  white           default
+color   body    brightwhite     default         ^[[:space:]].*
+color   body    yellow          default         ^(diff).*
+#color   body    white           default         ^[\-\-\-].*
+#color   body    white           default         ^[\+\+\+].*
+#color   body    green           default         ^[\+].*
+#color   body    red             default         ^[\-].*
+#color   body    brightblue      default         [@@].*
+color   body    brightwhite     default         ^(\s).*
+color   body    cyan            default         ^(Signed-off-by).*
+color   body    cyan            default         ^(Docker-DCO-1.1-Signed-off-by).*
+color   body    brightwhite     default         ^(Cc)
+color   body    yellow          default         "^diff \-.*"
+color   body    brightwhite     default         "^index [a-f0-9].*"
+color   body    brightblue      default         "^---$"
+color   body    white           default         "^\-\-\- .*"
+color   body    white           default         "^[\+]`3` .*"
+color   body    green           default         "^[\+][^\+]+.*"
+color   body    red             default         "^\-[^\-]+.*"
+color   body    brightblue      default         "^@@ .*"
+color   body    green           default         "LGTM"
+color   body    brightmagenta   default         "-- Commit Summary --"
+color   body    brightmagenta   default         "-- File Changes --"
+color   body    brightmagenta   default         "-- Patch Links --"
+color   body    green           default         "^Merged #.*"
+color   body    red             default         "^Closed #.*"
+color   body    brightblue      default         "^Reply to this email.*"
