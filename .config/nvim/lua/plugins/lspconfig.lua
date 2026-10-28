@@ -12,8 +12,8 @@ return {
                 clangd = {},
                 cmake = {},
                 roslyn_ls = {},
-                gdscriptls = {},
                 bashls = {},
+                qmlls = {},
          }
 
         local lspconfig = require("lspconfig")
