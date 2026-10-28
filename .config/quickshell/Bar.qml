@@ -1,13 +1,8 @@
 import Quickshell
-import Quickshell.Io
-import QtQuick
+import QtQuick.Layouts
 import "bar"
 
-Scope {
-
-        Time { id: timeSource }
-        Update { id: updateSource }
-        
+Scope { 
         Variants {
                 model: Quickshell.screens
 
@@ -23,11 +18,14 @@ Scope {
                         
                         implicitHeight: 30
 
-                        Text {
-                                anchors.centerIn: parent
-                                text: timeSource.time
-                                text: updateSource.update
+                        RowLayout {
+                                id: layout
+                                anchors.leftMargin: parent
+                                LeftBar {
+
+                                }
                         }
+
                 }
         }
 }
