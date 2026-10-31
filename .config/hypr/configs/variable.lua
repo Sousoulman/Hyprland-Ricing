@@ -9,7 +9,7 @@ browser = "zen-browser -p 'default'"
 menu = "rofi -show drun" 
 textedit = "kitty -e nvim ~/"
 notes = "obsidian"
-discordLauncher = "webcord"
+discordLauncher = "discord"
 
 -- define some directories
 scripts = "~/.config/hypr/scripts"
