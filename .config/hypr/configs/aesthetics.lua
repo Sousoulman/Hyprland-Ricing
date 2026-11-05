@@ -1,7 +1,7 @@
 hl.config({
     general = {
-        gaps_in = 10, 
-        gaps_out = 20,
+        gaps_in = 6, 
+        gaps_out = 13,
 
         border_size = 5,
 
@@ -13,7 +13,8 @@ hl.config({
 
     decoration = {
         rounding = 10,
-        inactive_opacity = .95,
+        active_opacity = .95,
+        inactive_opacity = .90,
 
         shadow = {
             enabled = true,
@@ -24,9 +25,14 @@ hl.config({
 
         blur = {
             enabled = true,
-            size = 2,
+            variant = 'aurora',
+            aurora = {
+                    intensity = .4,
+                    speed = 4
+            },
+            size = 3,
             passes = 2,
-            vibrancy = 0.16
+            vibrancy = .9
         }
     },
 
@@ -36,14 +42,14 @@ hl.config({
 
     dwindle = {
       force_split                  = 2,
-      preserve_split               = false,
+      preserve_split               = true,
       smart_split                  = false,
-      smart_resizing               = true,
+      smart_resizing               = false,
       permanent_direction_override = false,
       special_scale_factor         = 1,
       split_width_multiplier       = 1.0,
       use_active_for_splits        = true,
-      default_split_ratio          = 1.0,
+      default_split_ratio          = 1.1,
       split_bias                   = 0,
       precise_mouse_move           = false,
   },
