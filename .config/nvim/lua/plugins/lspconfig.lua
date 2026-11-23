@@ -14,6 +14,7 @@ return {
                 roslyn_ls = {},
                 bashls = {},
                 qmlls = {},
+                rust_analyzer = {},
          }
 
         local lspconfig = require("lspconfig")

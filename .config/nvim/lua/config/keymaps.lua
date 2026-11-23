@@ -1,12 +1,18 @@
 vim.keymap.set('n', '<Space>', '<Nop>')
 
+-- Save file
+vim.keymap.set('n', '<Space>s', function()
+        vim.cmd("w")
+end
+)
+
 -- Open a terminal
 vim.keymap.set('n', '<leader>t', function()
         vim.cmd("split | term")
 end
 )
 
---  a terminal
+-- Exit a terminal
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 
 vim.keymap.set('n', '<leader>n', function()
@@ -22,7 +28,10 @@ vim.keymap.set('n', '<leader>n', function()
 end)
 
 
+-- Build a c project
 vim.keymap.set('n', '<leader>b', ":CMakeBuild<CR>", { desc = "building the project"})
+
+-- Run a project
 vim.keymap.set('n', '<leader>r', function()
         local main_directory = vim.fn.getcwd()
         local all_directory = {main_directory, string.format("%s/src", main_directory)}
@@ -41,4 +50,8 @@ vim.keymap.set('n', '<leader>r', function()
         end
 end)
 
+-- Quit a nvim page
 vim.keymap.set('n', '<leader>c', ":q<CR>", { desc = "quitting the current page"})
+
+-- Exit the current page
+vim.keymap.set('n', '<leader>g', [[<C-w>]])
